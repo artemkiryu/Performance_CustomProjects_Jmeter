@@ -1,0 +1,14 @@
+
+STAGING PORTALS
+Attendee Portal:
+https://attendmobile.com/apps/1943/gatherings/2042
+Admin Portal:
+https://cms.attendmobile.com/apps/1943/gatherings/2042
+
+
+PRDUCTION PORTALS
+Production Attendee UI: 
+https://testing.gatherdigital.com/apps/2568/gatherings/6840
+Production Admin UI: 
+https://cms.gatherdigital.com/apps/2568/gatherings/6840
+

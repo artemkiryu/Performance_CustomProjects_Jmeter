@@ -1,0 +1,254 @@
+Step: Login > Login22
+
+Request Header:
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Referer: https://${domain}/apps/2568/gatherings/6840
+Sec-Fetch-Site: same-origin
+Accept-Language: en-US,en;q=0.5
+Origin: https://${domain}
+Sec-Fetch-User: ?1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate, br
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:91.0) Gecko/20100101 Firefox/91.0
+Sec-Fetch-Dest: document
+Host: testing.gatherdigital.com
+
+Request Body:
+GET https://testing.gatherdigital.com/apps/2568
+GET data:
+Cookie Data:
+_gdweb_session=e7e9a69a344f548c408d1803510c4c47
+
+Response Data // HTML Page Render:
+ava.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:930)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:641)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.followRedirects(HTTPSamplerBase.java:1633)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.resultProcessing(HTTPSamplerBase.java:1727)
+	at org.apache.jmeter.protocol.http.sampler.HTTPAbstractImpl.resultProcessing(HTTPAbstractImpl.java:555)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:728)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1281)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1270)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:630)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:558)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256)
+	at java.lang.Thread.run(Unknown Source)
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Step: Click on Survey >> Load Test1 > new_survey_responseNotFound
+
+Sampler Request
+
+Thread Name:Thread Group 1-1875
+Sample Start:2021-09-13 09:49:08 PDT
+Load time:9430
+Connect Time:0
+Latency:9430
+Size in bytes:1113
+Sent bytes:1774
+Headers size in bytes:385
+Body size in bytes:728
+Sample Count:1
+Error Count:1
+Data type ("text"|"bin"|""):text
+Response code:404
+Response message:Not Found
+HTTPSampleResult fields:
+ContentType: text/html; charset=utf-8
+DataEncoding: utf-8
+
+Request
+
+POST https://testing.gatherdigital.com/new_survey_responseNotFound
+POST data:
+utf8=%E2%9C%93&survey_response%5Bresource_id%5D=eventIDNotFound&survey_response%5Bresource_type%5D=survey_answers_attributesNotFound&survey_response%5Bgathering_id%5D=6840&survey_response%5Bsurvey_id%5D=Extract+survey_id+not+found&inline=survey_answers_attributesNotFound&survey_response%5Bsurvey_answers_attributes%5D%5B0%5D%5Bsurvey_question_id%5D=survey_answers_attributesNotFound&survey_response%5Bsurvey_answers_attributes%5D%5B0%5D%5Banswer%5D=5&survey_response%5Bsurvey_answers_attributes%5D%5B1%5D%5Bsurvey_question_id%5D=survey_answers_attributesNotFound&survey_response%5Bsurvey_answers_attributes%5D%5B1%5D%5Banswer%5D=survey_answers_attributesNotFound
+Cookie Data:
+_ga=GA1.2.504458554.1631028318; _gid=GA1.2.1199525567.1631028318; browser.timezone=Asia/Calcutta; _gdweb_session=ce27edc36bb3966d7c818349a8c310c1; _gat=1
+
+Connection: keep-alive
+t: text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Host: testing.gatherdigital.com
+Origin: https://testing.gatherdigital.com
+Referer: https://testing.gatherdigital.com/apps/2568/gatherings/6840/events/eventIDNotFound?feature_id=featureIDNotFound
+sec-ch-ua: "Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+X-CSRF-Token: ${csrf-token}
+X-Requested-With: XMLHttpRequest
+Content-Length: 663
+
+Response
+HTTP/1.1 404 Not Found
+Server: nginx
+Date: Mon, 13 Sep 2021 16:49:17 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 728
+Connection: keep-alive
+Keep-Alive: timeout=20
+Status: 404 Not Found
+X-Request-Id: 5875dc80-4d0a-44d7-b3c3-3297f939a8d6
+X-Runtime: 0.002421
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Step: Go Back to Agenda >> /apps/2568/gatherings/6840/events
+
+Sampler Result:
+Thread Name:Thread Group 1-741
+Sample Start:2021-09-13 09:48:48 PDT
+Load time:29965
+Connect Time:0
+Latency:29965
+Size in bytes:1113
+Sent bytes:691
+Headers size in bytes:385
+Body size in bytes:728
+Sample Count:1
+Error Count:1
+Data type ("text"|"bin"|""):text
+Response code:404
+Response message:Not Found
+HTTPSampleResult fields:
+ContentType: text/html; charset=utf-8
+DataEncoding: utf-8
+
+Request:
+
+GET https://testing.gatherdigital.com/apps/2568/gatherings/6840/events?feature_id=featureIDNotFound
+GET data:
+Cookie Data:
+_gdweb_session=f66e85e1b94ee87c592de0d560b07e5b
+
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Referer: https://testing.gatherdigital.com/apps/2568/gatherings/6840/events/eventIDNotFound?feature_id=featureIDNotFound
+Sec-Fetch-Site: same-origin
+Accept-Language: en-US,en;q=0.5
+Sec-Fetch-User: ?1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate, br
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0
+Sec-Fetch-Dest: document
+Host: testing.gatherdigital.com
+
+Respose:
+HTTP/1.1 404 Not Found
+Server: nginx
+Date: Mon, 13 Sep 2021 16:49:17 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 728
+Connection: keep-alive
+Keep-Alive: timeout=20
+Status: 404 Not Found
+X-Request-Id: 9f146b43-18d3-4ee5-9c1c-a815d011c45b
+X-Runtime: 0.171339
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Step: Submit Comment
+
+Sampler Results:
+Thread Name:Thread Group 1-1848
+Sample Start:2021-09-13 09:49:09 PDT
+Load time:8848
+Connect Time:195
+Latency:8847
+Size in bytes:1113
+Sent bytes:714
+Headers size in bytes:385
+Body size in bytes:728
+Sample Count:1
+Error Count:1
+Data type ("text"|"bin"|""):text
+Response code:404
+Response message:Not Found
+HTTPSampleResult fields:
+ContentType: text/html; charset=utf-8
+DataEncoding: utf-8
+
+Request:
+
+POST https://testing.gatherdigital.com/submitCommentPathNotFound
+POST data:
+utf8=%E2%9C%93&social_object%5Btext%5D=Comment
+[no cookies]
+
+Connection: keep-alive
+Sec-Fetch-Mode: cors
+Referer: https://${domain}${CommentPath}
+Sec-Fetch-Site: same-origin
+Accept-Language: en-US,en;q=0.5
+Origin: https://${domain}
+Accept: text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-CSRF-Token: ${csrf-token}
+Accept-Encoding: gzip, deflate, br
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:91.0) Gecko/20100101 Firefox/91.0
+Sec-Fetch-Dest: empty
+Content-Length: 46
+Host: testing.gatherdigital.com
+
+Response:
+HTTP/1.1 404 Not Found
+Server: nginx
+Date: Mon, 13 Sep 2021 16:49:17 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 728
+Connection: keep-alive
+Keep-Alive: timeout=20
+Status: 404 Not Found
+X-Request-Id: 024a56d7-e808-4af0-8888-f30c5750754f
+X-Runtime: 0.002245
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
