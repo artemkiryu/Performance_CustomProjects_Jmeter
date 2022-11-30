@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Reg POST" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Reg POST" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+        <longProp name="ThreadGroup.start_time">1387868917000</longProp>
+        <longProp name="ThreadGroup.end_time">1387868917000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="Reg POST Authorization Manager" enabled="true">
+          <collectionProp name="AuthManager.auth_list">
+            <elementProp name="" elementType="Authorization">
+              <stringProp name="Authorization.url"></stringProp>
+              <stringProp name="Authorization.username">system</stringProp>
+              <stringProp name="Authorization.password">#dR%ejF3RFm=</stringProp>
+              <stringProp name="Authorization.domain"></stringProp>
+              <stringProp name="Authorization.realm"></stringProp>
+            </elementProp>
+          </collectionProp>
+          <boolProp name="AuthManager.controlledByThreadGroup">true</boolProp>
+          <boolProp name="AuthManager.clearEachIteration">true</boolProp>
+        </AuthManager>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Reg  POST Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Reg POST Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Reg POST Request 1" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;dateCreated&quot;: &quot;2012-04-05T15:20:30&quot;,&#xd;
+&quot;dateModified&quot;: &quot;2020-04-23T19:34:52&quot;,&#xd;
+&quot;statusModified&quot;: &quot;2012-04-23T12:20:45&quot;,&#xd;
+&quot;registrationCode&quot;: &quot;12-3815-1008&quot;,&#xd;
+&quot;pkRegId&quot;: &quot;0x727520001&quot;,&#xd;
+&quot;isTestMode&quot;: true,&#xd;
+&quot;isActive&quot;: true,&#xd;
+&quot;isConfirmed&quot;: true,&#xd;
+&quot;registrationStatusLabel&quot;: &quot;New&quot;,&#xd;
+&quot;isCanceled&quot;: false,&#xd;
+&quot;isAccepted&quot;: true,&#xd;
+&quot;isPending&quot;: false,&#xd;
+&quot;isBadgePrinted&quot;: false,&#xd;
+&quot;doFollowUp&quot;: false,&#xd;
+&quot;dateCompleted&quot;: &quot;2012-04-20T15:57:23&quot;,&#xd;
+&quot;dateRegistered&quot;: &quot;2012-04-20T15:57:23&quot;,&#xd;
+&quot;dateAccepted&quot;: &quot;2012-04-05T15:42:39&quot;,&#xd;
+&quot;eventCode&quot;: &quot;ILTMAMERICAS2012&quot;,&#xd;
+&quot;eventName&quot;: &quot;ILTM Americas 2012 - EURO Do not use&quot;,&#xd;
+&quot;pkEventId&quot;: &quot;0x4950001&quot;,&#xd;
+&quot;accountCode&quot;: &quot;reeduat&quot;,&#xd;
+&quot;attendeeTypeCode&quot;: &quot;Hosted Buyers&quot;,&#xd;
+&quot;attendeeType&quot;: &quot;Hosted Buyers&quot;,&#xd;
+&quot;regNotes&quot;: &quot;&quot;,&#xd;
+&quot;lastAccessedForm&quot;: &quot;Fast Track Registration Form&quot;,&#xd;
+&quot;profile&quot;: {&#xd;
+&quot;profileId&quot;: 2299,&#xd;
+&quot;externalKey&quot;: &quot;&quot;,&#xd;
+&quot;prefix&quot;: &quot;Mr.&quot;,&#xd;
+&quot;suffix&quot;: &quot;&quot;,&#xd;
+&quot;firstName&quot;: &quot;Test pro fname&quot;,&#xd;
+&quot;middleName&quot;: &quot;&quot;,&#xd;
+&quot;lastName&quot;: &quot;Test pro lname&quot;,&#xd;
+&quot;badgeName&quot;: &quot;Test badge name&quot;,&#xd;
+&quot;dob&quot;: null,&#xd;
+&quot;position&quot;: &quot;Director&quot;,&#xd;
+&quot;organization&quot;: &quot;Certain&quot;,&#xd;
+&quot;phone&quot;: &quot;&quot;,&#xd;
+&quot;phone2&quot;: &quot;&quot;,&#xd;
+&quot;phoneMobile&quot;: &quot;&quot;,&#xd;
+&quot;fax&quot;: &quot;&quot;,&#xd;
+&quot;email&quot;: &quot;2E668680-727E-4441-85E0-CEEF505985C5@certain.com&quot;,&#xd;
+&quot;webSiteURL&quot;: &quot;www.certain.com&quot;,&#xd;
+&quot;photo&quot;: null,&#xd;
+&quot;pin&quot;: &quot;REEDUAT02299&quot;,&#xd;
+&quot;pkProfileId&quot;: &quot;0x439480001&quot;,&#xd;
+&quot;profileSource&quot;: null,&#xd;
+&quot;address&quot;: {&#xd;
+&quot;line1&quot;: &quot;Test addr line 1&quot;,&#xd;
+&quot;line2&quot;: &quot;Test addr line 2&quot;,&#xd;
+&quot;line3&quot;: &quot;Test addr line 3&quot;,&#xd;
+&quot;line4&quot;: &quot;&quot;,&#xd;
+&quot;city&quot;: &quot;Test addr city&quot;,&#xd;
+&quot;state&quot;: &quot;CA&quot;,&#xd;
+&quot;intlState&quot;: &quot;&quot;,&#xd;
+&quot;countryCode&quot;: &quot;US&quot;,&#xd;
+&quot;country&quot;: &quot;United States&quot;,&#xd;
+&quot;postalCode&quot;: &quot;Test addr postal code&quot;,&#xd;
+&quot;addId&quot;: null&#xd;
+},&#xd;
+&quot;altAddress&quot;: null,&#xd;
+&quot;shipAddress&quot;: null,&#xd;
+&quot;profileQuestions&quot;: null,&#xd;
+&quot;assistant&quot;: null,&#xd;
+&quot;additional&quot;: null,&#xd;
+&quot;dataPrivacyPolicies&quot;: null,&#xd;
+&quot;integrationExternalKeys&quot;: null,&#xd;
+&quot;gender&quot;: null,&#xd;
+&quot;ccAssistantOnEmails&quot;: false,&#xd;
+&quot;ccAdditionalOnEmails&quot;: false&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">certainazure4.certain.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/certainExternal/service/v1/Registration/reeduat/ILTMAMERICAS2012/12-3815-1008</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Reg POSTSummary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Reg POST Request 2" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;dateCreated&quot;: &quot;2012-04-22T19:54:53&quot;,&#xd;
+&quot;dateModified&quot;: &quot;2017-03-01T03:35:52&quot;,&#xd;
+&quot;statusModified&quot;: &quot;2012-04-22T20:59:25&quot;,&#xd;
+&quot;registrationCode&quot;: &quot;12-4230-8805&quot;,&#xd;
+&quot;pkRegId&quot;: &quot;0x806370001&quot;,&#xd;
+&quot;isTestMode&quot;: true,&#xd;
+&quot;isActive&quot;: true,&#xd;
+&quot;isConfirmed&quot;: true,&#xd;
+&quot;registrationStatusLabel&quot;: &quot;New&quot;,&#xd;
+&quot;isCanceled&quot;: false,&#xd;
+&quot;isAccepted&quot;: true,&#xd;
+&quot;isPending&quot;: false,&#xd;
+&quot;isBadgePrinted&quot;: false,&#xd;
+&quot;doFollowUp&quot;: false,&#xd;
+&quot;dateCompleted&quot;: &quot;2012-04-22T20:29:58&quot;,&#xd;
+&quot;dateRegistered&quot;: &quot;2012-04-22T20:29:58&quot;,&#xd;
+&quot;dateAccepted&quot;: &quot;2012-04-22T19:58:24&quot;,&#xd;
+&quot;eventCode&quot;: &quot;ILTMAMERICAS2012&quot;,&#xd;
+&quot;eventName&quot;: &quot;ILTM Americas 2012 - EURO Do not use&quot;,&#xd;
+&quot;pkEventId&quot;: &quot;0x4950001&quot;,&#xd;
+&quot;accountCode&quot;: &quot;reeduat&quot;,&#xd;
+&quot;attendeeTypeCode&quot;: &quot;Executive Buyers&quot;,&#xd;
+&quot;attendeeType&quot;: &quot;Executive Buyers&quot;,&#xd;
+&quot;regNotes&quot;: &quot;&quot;,&#xd;
+&quot;lastAccessedForm&quot;: &quot;Manual Add/Update&quot;,&#xd;
+&quot;profile&quot;: {&#xd;
+&quot;profileId&quot;: 2552,&#xd;
+&quot;externalKey&quot;: &quot;&quot;,&#xd;
+&quot;prefix&quot;: &quot;Mr.&quot;,&#xd;
+&quot;suffix&quot;: &quot;&quot;,&#xd;
+&quot;firstName&quot;: &quot;Test pro fname&quot;,&#xd;
+&quot;middleName&quot;: &quot;&quot;,&#xd;
+&quot;lastName&quot;: &quot;Test pro lname&quot;,&#xd;
+&quot;badgeName&quot;: &quot;Test badge name&quot;,&#xd;
+&quot;dob&quot;: null,&#xd;
+&quot;position&quot;: &quot;Director&quot;,&#xd;
+&quot;organization&quot;: &quot;Certain&quot;,&#xd;
+&quot;phone&quot;: &quot;&quot;,&#xd;
+&quot;phone2&quot;: &quot;&quot;,&#xd;
+&quot;phoneMobile&quot;: &quot;&quot;,&#xd;
+&quot;fax&quot;: &quot;&quot;,&#xd;
+&quot;email&quot;: &quot;984CEAE0-58DD-4469-93E1-461F25D2289F@certain.com&quot;,&#xd;
+&quot;webSiteURL&quot;: &quot;&quot;,&#xd;
+&quot;photo&quot;: null,&#xd;
+&quot;pin&quot;: &quot;REEDUAT02552&quot;,&#xd;
+&quot;pkProfileId&quot;: &quot;0x487550001&quot;,&#xd;
+&quot;profileSource&quot;: null,&#xd;
+&quot;address&quot;: {&#xd;
+&quot;line1&quot;: &quot;Test addr line 1&quot;,&#xd;
+&quot;line2&quot;: &quot;Test addr line 2&quot;,&#xd;
+&quot;line3&quot;: &quot;Test addr line 3&quot;,&#xd;
+&quot;line4&quot;: &quot;&quot;,&#xd;
+&quot;city&quot;: &quot;Test addr city&quot;,&#xd;
+&quot;state&quot;: &quot;CA&quot;,&#xd;
+&quot;intlState&quot;: &quot;&quot;,&#xd;
+&quot;countryCode&quot;: &quot;US&quot;,&#xd;
+&quot;country&quot;: &quot;United States&quot;,&#xd;
+&quot;postalCode&quot;: &quot;Test addr postal code&quot;,&#xd;
+&quot;addId&quot;: null&#xd;
+},&#xd;
+&quot;altAddress&quot;: null,&#xd;
+&quot;shipAddress&quot;: null,&#xd;
+&quot;profileQuestions&quot;: null,&#xd;
+&quot;assistant&quot;: null,&#xd;
+&quot;additional&quot;: null,&#xd;
+&quot;dataPrivacyPolicies&quot;: null,&#xd;
+&quot;integrationExternalKeys&quot;: null,&#xd;
+&quot;gender&quot;: null,&#xd;
+&quot;ccAssistantOnEmails&quot;: false,&#xd;
+&quot;ccAdditionalOnEmails&quot;: false&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">certainazure4.certain.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/certainExternal/service/v1/Registration/reeduat/ILTMAMERICAS2012/12-4230-8805</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Reg POST Request 3" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;dateCreated&quot;: &quot;2012-04-26T14:32:15&quot;,&#xd;
+&quot;dateModified&quot;: &quot;2017-03-01T03:35:52&quot;,&#xd;
+&quot;registrationCode&quot;: &quot;12-4413-2562&quot;,&#xd;
+&quot;pkRegId&quot;: &quot;0x841140001&quot;,&#xd;
+&quot;isTestMode&quot;: true,&#xd;
+&quot;isActive&quot;: true,&#xd;
+&quot;isConfirmed&quot;: false,&#xd;
+&quot;registrationStatusLabel&quot;: &quot;New&quot;,&#xd;
+&quot;isCanceled&quot;: false,&#xd;
+&quot;isAccepted&quot;: true,&#xd;
+&quot;isPending&quot;: false,&#xd;
+&quot;isBadgePrinted&quot;: false,&#xd;
+&quot;doFollowUp&quot;: false,&#xd;
+&quot;dateAccepted&quot;: &quot;2012-04-26T14:32:36&quot;,&#xd;
+&quot;eventCode&quot;: &quot;ILTMAMERICAS2012&quot;,&#xd;
+&quot;eventName&quot;: &quot;ILTM Americas 2012 - EURO Do not use&quot;,&#xd;
+&quot;pkEventId&quot;: &quot;0x4950001&quot;,&#xd;
+&quot;accountCode&quot;: &quot;reeduat&quot;,&#xd;
+&quot;lastAccessedForm&quot;: &quot;Registration Form&quot;,&#xd;
+&quot;profile&quot;: {&#xd;
+&quot;profileId&quot;: 2634,&#xd;
+&quot;externalKey&quot;: &quot;&quot;,&#xd;
+&quot;prefix&quot;: &quot;Ms.&quot;,&#xd;
+&quot;suffix&quot;: &quot;&quot;,&#xd;
+&quot;firstName&quot;: &quot;Test pro fname&quot;,&#xd;
+&quot;middleName&quot;: &quot;&quot;,&#xd;
+&quot;lastName&quot;: &quot;Test pro lname&quot;,&#xd;
+&quot;badgeName&quot;: &quot;Test badge name&quot;,&#xd;
+&quot;dob&quot;: null,&#xd;
+&quot;position&quot;: &quot;Strategic Program Manager&quot;,&#xd;
+&quot;organization&quot;: &quot;Certain, Inc.&quot;,&#xd;
+&quot;phone&quot;: &quot;&quot;,&#xd;
+&quot;phone2&quot;: &quot;&quot;,&#xd;
+&quot;phoneMobile&quot;: &quot;&quot;,&#xd;
+&quot;fax&quot;: &quot;&quot;,&#xd;
+&quot;email&quot;: &quot;F6F11856-E807-4634-A716-736DF83364D2@certain.com&quot;,&#xd;
+&quot;webSiteURL&quot;: &quot;www.certain.com&quot;,&#xd;
+&quot;photo&quot;: null,&#xd;
+&quot;pin&quot;: &quot;REEDUAT02634&quot;,&#xd;
+&quot;pkProfileId&quot;: &quot;0x503130001&quot;,&#xd;
+&quot;profileSource&quot;: null,&#xd;
+&quot;address&quot;: {&#xd;
+&quot;line1&quot;: &quot;Test addr line 1&quot;,&#xd;
+&quot;line2&quot;: &quot;Test addr line 2&quot;,&#xd;
+&quot;line3&quot;: &quot;Test addr line 3&quot;,&#xd;
+&quot;line4&quot;: &quot;&quot;,&#xd;
+&quot;city&quot;: &quot;Test addr city&quot;,&#xd;
+&quot;state&quot;: &quot;CA&quot;,&#xd;
+&quot;intlState&quot;: &quot;&quot;,&#xd;
+&quot;countryCode&quot;: &quot;US&quot;,&#xd;
+&quot;country&quot;: &quot;United States&quot;,&#xd;
+&quot;postalCode&quot;: &quot;Test addr postal code&quot;,&#xd;
+&quot;addId&quot;: null&#xd;
+},&#xd;
+&quot;altAddress&quot;: null,&#xd;
+&quot;shipAddress&quot;: null,&#xd;
+&quot;profileQuestions&quot;: null,&#xd;
+&quot;assistant&quot;: null,&#xd;
+&quot;additional&quot;: null,&#xd;
+&quot;dataPrivacyPolicies&quot;: null,&#xd;
+&quot;integrationExternalKeys&quot;: null,&#xd;
+&quot;gender&quot;: null,&#xd;
+&quot;ccAssistantOnEmails&quot;: false,&#xd;
+&quot;ccAdditionalOnEmails&quot;: false&#xd;
+}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">certainazure4.certain.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/certainExternal/service/v1/Registration/reeduat/ILTMAMERICAS2012/12-4413-2562</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
