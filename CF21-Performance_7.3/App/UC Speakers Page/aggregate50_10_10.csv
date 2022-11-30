@@ -1,0 +1,5 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
+Login Page,500,118,88,275,287,384,75,458,0.000%,30.36376,333.79,3.88
+Login Credentials,500,356,316,571,656,888,159,973,0.000%,30.55861,1162.78,9.34
+Speakers Internal APIs,500,320,277,547,609,725,118,912,0.000%,30.51944,336.77,12.04
+TOTAL,1500,265,253,503,590,781,75,973,0.000%,88.37045,1769.73,24.39
