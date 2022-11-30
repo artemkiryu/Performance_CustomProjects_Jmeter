@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1200</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">150</stringProp>
+        <longProp name="ThreadGroup.start_time">1281132211000</longProp>
+        <longProp name="ThreadGroup.end_time">1281132211000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+          <stringProp name="CookieManager.policy">rfc2109</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="VIEWSTATE" elementType="Argument">
+              <stringProp name="Argument.name">VIEWSTATE</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="jsessionid" elementType="Argument">
+              <stringProp name="Argument.name">jsessionid</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">User-Agent</stringProp>
+              <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Language</stringProp>
+              <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Step 1" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://stagingaws7.certain.com/profile/form/index.cfm" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="PKformID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0x5271941b78</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">PKformID</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">stagingaws7.certain.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/profile/form/index.cfm</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://stagingaws7.certain.com/profile/form/index.cfm" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="submitForm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">Continue</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">submitForm</stringProp>
+                </elementProp>
+                <elementProp name="pro_fname" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">test20</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_fname</stringProp>
+                </elementProp>
+                <elementProp name="pro_lname" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">test20</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_lname</stringProp>
+                </elementProp>
+                <elementProp name="pro_email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">test20@test.com</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_email</stringProp>
+                </elementProp>
+                <elementProp name="pro_prefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_prefix</stringProp>
+                </elementProp>
+                <elementProp name="pro_mname" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_mname</stringProp>
+                </elementProp>
+                <elementProp name="pro_suffix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_suffix</stringProp>
+                </elementProp>
+                <elementProp name="pro_badge_name" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_badge_name</stringProp>
+                </elementProp>
+                <elementProp name="pro_position" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_position</stringProp>
+                </elementProp>
+                <elementProp name="pro_organization" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_organization</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_line1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_line1</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_line2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_line2</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_line3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_line3</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_line4" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_line4</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_city" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_city</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_state</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_postal_code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_postal_code</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_intl_state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_intl_state</stringProp>
+                </elementProp>
+                <elementProp name="pro_addr_country" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">United States</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_addr_country</stringProp>
+                </elementProp>
+                <elementProp name="pro_url" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_url</stringProp>
+                </elementProp>
+                <elementProp name="pro_phone" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_phone</stringProp>
+                </elementProp>
+                <elementProp name="pro_phone2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_phone2</stringProp>
+                </elementProp>
+                <elementProp name="pro_phone_mobile" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_phone_mobile</stringProp>
+                </elementProp>
+                <elementProp name="pro_fax" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_fax</stringProp>
+                </elementProp>
+                <elementProp name="pro_ssn" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ssn</stringProp>
+                </elementProp>
+                <elementProp name="pro_dob" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_dob</stringProp>
+                </elementProp>
+                <elementProp name="pro_frn_gender_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_frn_gender_id</stringProp>
+                </elementProp>
+                <elementProp name="pro_pin" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_pin</stringProp>
+                </elementProp>
+                <elementProp name="pro_password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_password</stringProp>
+                </elementProp>
+                <elementProp name="pro_asst_name" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_asst_name</stringProp>
+                </elementProp>
+                <elementProp name="pro_asst_email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_asst_email</stringProp>
+                </elementProp>
+                <elementProp name="pro_asst_phone" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_asst_phone</stringProp>
+                </elementProp>
+                <elementProp name="pro_asst_cc_email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_asst_cc_email</stringProp>
+                </elementProp>
+                <elementProp name="pro_show_online" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_show_online</stringProp>
+                </elementProp>
+                <elementProp name="pro_external_frn_key" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_external_frn_key</stringProp>
+                </elementProp>
+                <elementProp name="pro_add_name" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_add_name</stringProp>
+                </elementProp>
+                <elementProp name="pro_add_email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_add_email</stringProp>
+                </elementProp>
+                <elementProp name="pro_add_phone" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_add_phone</stringProp>
+                </elementProp>
+                <elementProp name="pro_add_cc_email" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_add_cc_email</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_line1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_line1</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_line2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_line2</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_line3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_line3</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_line4" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_line4</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_city" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_city</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_state</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_postal_code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_postal_code</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_intl_state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_intl_state</stringProp>
+                </elementProp>
+                <elementProp name="pro_alt_addr_country" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_alt_addr_country</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_line1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_line1</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_line2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_line2</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_line3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_line3</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_line4" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_line4</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_city" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_city</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_state</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_postal_code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_postal_code</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_intl_state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_intl_state</stringProp>
+                </elementProp>
+                <elementProp name="pro_ship_addr_country" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_ship_addr_country</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_travel_login_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_travel_login_id</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_passport_fname" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_passport_fname</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_passport_lname" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_passport_lname</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_passport_num" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_passport_num</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_frn_cou_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_frn_cou_id</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_passport_exp" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_passport_exp</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_frn_arln_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_frn_arln_id</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_freq_fly_num" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_freq_fly_num</stringProp>
+                </elementProp>
+                <elementProp name="pro_trv_frn_arln_seat_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_trv_frn_arln_seat_id</stringProp>
+                </elementProp>
+                <elementProp name="pro_avatar" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">pro_avatar</stringProp>
+                </elementProp>
+                <elementProp name="profile_third_party_key" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">profile_third_party_key</stringProp>
+                </elementProp>
+                <elementProp name="third_party_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">third_party_id</stringProp>
+                </elementProp>
+                <elementProp name="sectionsToCheck" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">20</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">sectionsToCheck</stringProp>
+                </elementProp>
+                <elementProp name="PkRegID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0x61690189afc5</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">PkRegID</stringProp>
+                </elementProp>
+                <elementProp name="PKprimary_regID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0x616901893823</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">PKprimary_regID</stringProp>
+                </elementProp>
+                <elementProp name="PKformID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0x5271941b78</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">PKformID</stringProp>
+                </elementProp>
+                <elementProp name="EmailHistId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">EmailHistId</stringProp>
+                </elementProp>
+                <elementProp name="submitForm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">yes</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">submitForm</stringProp>
+                </elementProp>
+                <elementProp name="bitIsFirstPage" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">bitIsFirstPage</stringProp>
+                </elementProp>
+                <elementProp name="isFirstAuthorizedRequest" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">isFirstAuthorizedRequest</stringProp>
+                </elementProp>
+                <elementProp name="entryPoint" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">entryPoint</stringProp>
+                </elementProp>
+                <elementProp name="token" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">eyJhbGciOiJIUzI1NiIsInppcCI6IkRFRiJ9.eNosUUmKHUAIvctfZ2FpOfXOobzHD-lFb0JIdyDQ5O6pQEDE4aE-3-fj_dfXx8sDERVar9PxPiyxhxEaI5aH5-PL49vz43mRg3M4zjQK8JJs38hgJbh8WnOEDGuF-hG2xXeCj-s61IEB0QthjPVUJZfItJ1tZWQROk2CTpVSphB50tHgdKsdWV3b9g3muA-0jZojTw6cRbNHLo7EaeEwWZ-RC1kRl1Vw0nLKTDCXKF_MlIEUAYm-h4Y3eZXxuUtTly5hTtZyYli0Ae4BrhKWp8CluMLcEw7nOdv3Wtx2v3aoWjXXUHp54b-SjGevDYHX4hD3qR3nXjbtETxa0FDUuJpi82USSQOmZFlQtZGyu0Abx2oL-W1vkdxyucA-tNiNyPUq9fb-foWq158fz7fvN3_9_ePxsq5cSmQqF_D8-F9AEZU_fwEAAP__.Bm5JlLozB0UfIRLka3Rd2MXPpRWPzFrcO_RBtnoVLs4</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">token</stringProp>
+                </elementProp>
+                <elementProp name="evtAuthToken" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">evtAuthToken</stringProp>
+                </elementProp>
+                <elementProp name="throttleID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">9FAE8A55-ABC8-11CD-8FA7E90B3E567CE7</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">throttleID</stringProp>
+                </elementProp>
+                <elementProp name="insertKey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">9FAE91D9B17A27009EACABDE421434A5</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">insertKey</stringProp>
+                </elementProp>
+                <elementProp name="r123_url__R123_DOMAIN" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">stagingaws7</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">r123_url__R123_DOMAIN</stringProp>
+                </elementProp>
+                <elementProp name="r123_url__PKformID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">0x5271941b78</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">r123_url__PKformID</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">stagingaws7.certain.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/profile/form/index.cfm</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+                <stringProp name="-379364617">13533076_295x166.jpg</stringProp>
+                <stringProp name="1390808136">49475318_295x166.jpg</stringProp>
+                <stringProp name="774283544">943970425_295x166.jpg</stringProp>
+                <stringProp name="-2063833660">948640806_295x166.jpg</stringProp>
+                <stringProp name="-1121104738">948642538_295x166.jpg</stringProp>
+                <stringProp name="248486197">https://player.vimeo.com/video/467496847</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://player.vimeo.com/static/proxy.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">player.vimeo.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/static/proxy.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1606201635">HTTP/1.1 200 OK</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Play" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="base64_init" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">base64_init</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">170vod-adaptive.akamaized.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">exp=1605742106~acl=%2Fd569623a-1221-4b36-a39b-bae6846b2ea1%2F%2A~hmac=264b39aabbf65309bf9d2ece81bd1246d4098942b1f00dca1d3e9abfdbdd5dc6/d569623a-1221-4b36-a39b-bae6846b2ea1/sep/audio/610f9b73/chop/segment-1.m4s</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://fresnel.vimeocdn.com/add/player-stats" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="beacon" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">beacon</stringProp>
+                </elementProp>
+                <elementProp name="session-id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">a9e89658d0ace55e182ad93f2254a85faf6ec4c11605726745</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">session-id</stringProp>
+                </elementProp>
+                <elementProp name="[{&quot;autoplay&quot;:false,&quot;buffer_count&quot;:0,&quot;total_buffer_duration&quot;:0,&quot;buffer_ratio&quot;:0,&quot;client_time&quot;:360935.9027393819,&quot;is_buffering&quot;:false,&quot;looping&quot;:false,&quot;minutes_watched&quot;:0,&quot;network_state&quot;:0,&quot;playback_rate&quot;:1,&quot;player_width&quot;:736,&quot;player_height&quot;:414,&quot;session_playback_duration&quot;:0,&quot;video_time&quot;:0,&quot;video_height&quot;:0,&quot;video_width&quot;:0,&quot;volume&quot;:1,&quot;background&quot;:false,&quot;clip_id&quot;:467496847,&quot;context&quot;:&quot;embed.main&quot;,&quot;device_pixel_ratio&quot;:1,&quot;drm&quot;:false,&quot;embed&quot;:true,&quot;is_mod&quot;:false,&quot;is_spatial&quot;:false,&quot;logged_in&quot;:false,&quot;owner_id&quot;:15371523,&quot;product&quot;:&quot;vimeo-vod&quot;,&quot;referrer&quot;:&quot;https://stagingaws7.certain.com/profile/form/index.cfm&quot;,&quot;session_id&quot;:&quot;a9e89658d0ace55e182ad93f2254a85faf6ec4c11605726745&quot;,&quot;stayed_on_auto&quot;:true,&quot;version&quot;:&quot;3.23.2&quot;,&quot;version_backend&quot;:&quot;1.27.5&quot;,&quot;viewer_id&quot;:0,&quot;viewer_team_id&quot;:0,&quot;viewer_team_origin_user_id&quot;:0,&quot;vuid&quot;:&quot;pl1735666693.1296630943&quot;,&quot;account_type&quot;:&quot;pro&quot;,&quot;privacy&quot;:&quot;anybody&quot;,&quot;audio_bitrate&quot;:0,&quot;auto&quot;:true,&quot;average_speed&quot;:0,&quot;cdn&quot;:&quot;akfire_interconnect_quic&quot;,&quot;delivery&quot;:&quot;dash&quot;,&quot;dropped_frames&quot;:0,&quot;dropped_frame_percent&quot;:0,&quot;event_time&quot;:1605727104,&quot;ended&quot;:false,&quot;forced_embed_quality&quot;:&quot;none&quot;,&quot;fullscreen&quot;:false,&quot;highest_available_profile&quot;:&quot;174&quot;,&quot;highest_profile&quot;:null,&quot;max_speed&quot;:0,&quot;mime&quot;:&quot;application/vnd.vimeo.dash+json&quot;,&quot;min_speed&quot;:0,&quot;most_used_profile&quot;:null,&quot;origin&quot;:&quot;gcs&quot;,&quot;profile_id&quot;:null,&quot;codec&quot;:&quot;&quot;,&quot;audio_codec&quot;:null,&quot;quality_downswitch_count&quot;:0,&quot;quality_upswitch_count&quot;:0,&quot;quality_switch_count&quot;:0,&quot;separate_av&quot;:true,&quot;target_profile_id&quot;:null,&quot;ttfb&quot;:0,&quot;video_bitrate&quot;:0,&quot;video_duration&quot;:44,&quot;video_file_id&quot;:null,&quot;chromecast_test&quot;:1,&quot;chromecast_group&quot;:false,&quot;stats_fresnel_test&quot;:1,&quot;stats_fresnel_group&quot;:true,&quot;name&quot;:&quot;video-manifest-loaded&quot;}]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">[{&quot;autoplay&quot;:false,&quot;buffer_count&quot;:0,&quot;total_buffer_duration&quot;:0,&quot;buffer_ratio&quot;:0,&quot;client_time&quot;:360935.9027393819,&quot;is_buffering&quot;:false,&quot;looping&quot;:false,&quot;minutes_watched&quot;:0,&quot;network_state&quot;:0,&quot;playback_rate&quot;:1,&quot;player_width&quot;:736,&quot;player_height&quot;:414,&quot;session_playback_duration&quot;:0,&quot;video_time&quot;:0,&quot;video_height&quot;:0,&quot;video_width&quot;:0,&quot;volume&quot;:1,&quot;background&quot;:false,&quot;clip_id&quot;:467496847,&quot;context&quot;:&quot;embed.main&quot;,&quot;device_pixel_ratio&quot;:1,&quot;drm&quot;:false,&quot;embed&quot;:true,&quot;is_mod&quot;:false,&quot;is_spatial&quot;:false,&quot;logged_in&quot;:false,&quot;owner_id&quot;:15371523,&quot;product&quot;:&quot;vimeo-vod&quot;,&quot;referrer&quot;:&quot;https://stagingaws7.certain.com/profile/form/index.cfm&quot;,&quot;session_id&quot;:&quot;a9e89658d0ace55e182ad93f2254a85faf6ec4c11605726745&quot;,&quot;stayed_on_auto&quot;:true,&quot;version&quot;:&quot;3.23.2&quot;,&quot;version_backend&quot;:&quot;1.27.5&quot;,&quot;viewer_id&quot;:0,&quot;viewer_team_id&quot;:0,&quot;viewer_team_origin_user_id&quot;:0,&quot;vuid&quot;:&quot;pl1735666693.1296630943&quot;,&quot;account_type&quot;:&quot;pro&quot;,&quot;privacy&quot;:&quot;anybody&quot;,&quot;audio_bitrate&quot;:0,&quot;auto&quot;:true,&quot;average_speed&quot;:0,&quot;cdn&quot;:&quot;akfire_interconnect_quic&quot;,&quot;delivery&quot;:&quot;dash&quot;,&quot;dropped_frames&quot;:0,&quot;dropped_frame_percent&quot;:0,&quot;event_time&quot;:1605727104,&quot;ended&quot;:false,&quot;forced_embed_quality&quot;:&quot;none&quot;,&quot;fullscreen&quot;:false,&quot;highest_available_profile&quot;:&quot;174&quot;,&quot;highest_profile&quot;:null,&quot;max_speed&quot;:0,&quot;mime&quot;:&quot;application/vnd.vimeo.dash+json&quot;,&quot;min_speed&quot;:0,&quot;most_used_profile&quot;:null,&quot;origin&quot;:&quot;gcs&quot;,&quot;profile_id&quot;:null,&quot;codec&quot;:&quot;&quot;,&quot;audio_codec&quot;:null,&quot;quality_downswitch_count&quot;:0,&quot;quality_upswitch_count&quot;:0,&quot;quality_switch_count&quot;:0,&quot;separate_av&quot;:true,&quot;target_profile_id&quot;:null,&quot;ttfb&quot;:0,&quot;video_bitrate&quot;:0,&quot;video_duration&quot;:44,&quot;video_file_id&quot;:null,&quot;chromecast_test&quot;:1,&quot;chromecast_group&quot;:false,&quot;stats_fresnel_test&quot;:1,&quot;stats_fresnel_group&quot;:true,&quot;name&quot;:&quot;video-manifest-loaded&quot;}]</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">fresnel.vimeocdn.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/add/player-stats</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://fresnel.vimeocdn.com/add/player-stats" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="beacon" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">beacon</stringProp>
+                </elementProp>
+                <elementProp name="session-id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">a9e89658d0ace55e182ad93f2254a85faf6ec4c11605726745</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">session-id</stringProp>
+                </elementProp>
+                <elementProp name="[{&quot;autoplay&quot;:false,&quot;buffer_count&quot;:0,&quot;total_buffer_duration&quot;:0,&quot;buffer_ratio&quot;:0,&quot;client_time&quot;:374696.2814610334,&quot;is_buffering&quot;:false,&quot;looping&quot;:false,&quot;minutes_watched&quot;:0,&quot;network_state&quot;:2,&quot;playback_rate&quot;:1,&quot;player_width&quot;:736,&quot;player_height&quot;:414,&quot;session_playback_duration&quot;:0,&quot;video_time&quot;:0,&quot;video_height&quot;:0,&quot;video_width&quot;:0,&quot;volume&quot;:1,&quot;background&quot;:false,&quot;clip_id&quot;:467496847,&quot;context&quot;:&quot;embed.main&quot;,&quot;device_pixel_ratio&quot;:1,&quot;drm&quot;:false,&quot;embed&quot;:true,&quot;is_mod&quot;:false,&quot;is_spatial&quot;:false,&quot;logged_in&quot;:false,&quot;owner_id&quot;:15371523,&quot;product&quot;:&quot;vimeo-vod&quot;,&quot;referrer&quot;:&quot;https://stagingaws7.certain.com/profile/form/index.cfm&quot;,&quot;session_id&quot;:&quot;a9e89658d0ace55e182ad93f2254a85faf6ec4c11605726745&quot;,&quot;stayed_on_auto&quot;:true,&quot;version&quot;:&quot;3.23.2&quot;,&quot;version_backend&quot;:&quot;1.27.5&quot;,&quot;viewer_id&quot;:0,&quot;viewer_team_id&quot;:0,&quot;viewer_team_origin_user_id&quot;:0,&quot;vuid&quot;:&quot;pl1735666693.1296630943&quot;,&quot;account_type&quot;:&quot;pro&quot;,&quot;privacy&quot;:&quot;anybody&quot;,&quot;audio_bitrate&quot;:0,&quot;auto&quot;:true,&quot;average_speed&quot;:0,&quot;cdn&quot;:&quot;akfire_interconnect_quic&quot;,&quot;delivery&quot;:&quot;dash&quot;,&quot;dropped_frames&quot;:0,&quot;dropped_frame_percent&quot;:0,&quot;event_time&quot;:1605727118,&quot;ended&quot;:false,&quot;forced_embed_quality&quot;:&quot;none&quot;,&quot;fullscreen&quot;:false,&quot;highest_available_profile&quot;:&quot;174&quot;,&quot;highest_profile&quot;:null,&quot;max_speed&quot;:0,&quot;mime&quot;:&quot;application/vnd.vimeo.dash+json&quot;,&quot;min_speed&quot;:0,&quot;most_used_profile&quot;:null,&quot;origin&quot;:&quot;gcs&quot;,&quot;profile_id&quot;:null,&quot;codec&quot;:&quot;&quot;,&quot;audio_codec&quot;:&quot;AAC&quot;,&quot;quality_downswitch_count&quot;:0,&quot;quality_upswitch_count&quot;:0,&quot;quality_switch_count&quot;:0,&quot;separate_av&quot;:true,&quot;target_profile_id&quot;:null,&quot;ttfb&quot;:0,&quot;video_bitrate&quot;:0,&quot;video_duration&quot;:44,&quot;video_file_id&quot;:null,&quot;chromecast_test&quot;:1,&quot;chromecast_group&quot;:false,&quot;stats_fresnel_test&quot;:1,&quot;stats_fresnel_group&quot;:true,&quot;name&quot;:&quot;video-start-attempt&quot;}]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">[{&quot;autoplay&quot;:false,&quot;buffer_count&quot;:0,&quot;total_buffer_duration&quot;:0,&quot;buffer_ratio&quot;:0,&quot;client_time&quot;:374696.2814610334,&quot;is_buffering&quot;:false,&quot;looping&quot;:false,&quot;minutes_watched&quot;:0,&quot;network_state&quot;:2,&quot;playback_rate&quot;:1,&quot;player_width&quot;:736,&quot;player_height&quot;:414,&quot;session_playback_duration&quot;:0,&quot;video_time&quot;:0,&quot;video_height&quot;:0,&quot;video_width&quot;:0,&quot;volume&quot;:1,&quot;background&quot;:false,&quot;clip_id&quot;:467496847,&quot;context&quot;:&quot;embed.main&quot;,&quot;device_pixel_ratio&quot;:1,&quot;drm&quot;:false,&quot;embed&quot;:true,&quot;is_mod&quot;:false,&quot;is_spatial&quot;:false,&quot;logged_in&quot;:false,&quot;owner_id&quot;:15371523,&quot;product&quot;:&quot;vimeo-vod&quot;,&quot;referrer&quot;:&quot;https://stagingaws7.certain.com/profile/form/index.cfm&quot;,&quot;session_id&quot;:&quot;a9e89658d0ace55e182ad93f2254a85faf6ec4c11605726745&quot;,&quot;stayed_on_auto&quot;:true,&quot;version&quot;:&quot;3.23.2&quot;,&quot;version_backend&quot;:&quot;1.27.5&quot;,&quot;viewer_id&quot;:0,&quot;viewer_team_id&quot;:0,&quot;viewer_team_origin_user_id&quot;:0,&quot;vuid&quot;:&quot;pl1735666693.1296630943&quot;,&quot;account_type&quot;:&quot;pro&quot;,&quot;privacy&quot;:&quot;anybody&quot;,&quot;audio_bitrate&quot;:0,&quot;auto&quot;:true,&quot;average_speed&quot;:0,&quot;cdn&quot;:&quot;akfire_interconnect_quic&quot;,&quot;delivery&quot;:&quot;dash&quot;,&quot;dropped_frames&quot;:0,&quot;dropped_frame_percent&quot;:0,&quot;event_time&quot;:1605727118,&quot;ended&quot;:false,&quot;forced_embed_quality&quot;:&quot;none&quot;,&quot;fullscreen&quot;:false,&quot;highest_available_profile&quot;:&quot;174&quot;,&quot;highest_profile&quot;:null,&quot;max_speed&quot;:0,&quot;mime&quot;:&quot;application/vnd.vimeo.dash+json&quot;,&quot;min_speed&quot;:0,&quot;most_used_profile&quot;:null,&quot;origin&quot;:&quot;gcs&quot;,&quot;profile_id&quot;:null,&quot;codec&quot;:&quot;&quot;,&quot;audio_codec&quot;:&quot;AAC&quot;,&quot;quality_downswitch_count&quot;:0,&quot;quality_upswitch_count&quot;:0,&quot;quality_switch_count&quot;:0,&quot;separate_av&quot;:true,&quot;target_profile_id&quot;:null,&quot;ttfb&quot;:0,&quot;video_bitrate&quot;:0,&quot;video_duration&quot;:44,&quot;video_file_id&quot;:null,&quot;chromecast_test&quot;:1,&quot;chromecast_group&quot;:false,&quot;stats_fresnel_test&quot;:1,&quot;stats_fresnel_group&quot;:true,&quot;name&quot;:&quot;video-start-attempt&quot;}]</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">fresnel.vimeocdn.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/add/player-stats</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://player-telemetry.vimeo.com/player-events/log/play" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="{&quot;referrer&quot;:&quot;https://stagingaws7.certain.com/profile/form/index.cfm&quot;,&quot;embed&quot;:true,&quot;context&quot;:&quot;embed.main&quot;,&quot;autoplay&quot;:0,&quot;loop&quot;:0,&quot;id&quot;:467496847,&quot;vodId&quot;:null,&quot;vodSaleId&quot;:null,&quot;sessionTime&quot;:0,&quot;videoShape&quot;:0,&quot;spatialPlayback&quot;:0,&quot;userId&quot;:0,&quot;userAccountType&quot;:&quot;none&quot;,&quot;userIsMod&quot;:0,&quot;teamOriginUserId&quot;:null,&quot;teamId&quot;:null,&quot;ownerId&quot;:15371523,&quot;ownerAccountType&quot;:&quot;pro&quot;,&quot;privacy&quot;:&quot;anybody&quot;,&quot;rating&quot;:null,&quot;type&quot;:&quot;html&quot;,&quot;videoFileId&quot;:0,&quot;delivery&quot;:&quot;dash&quot;,&quot;profileId&quot;:-1,&quot;quality&quot;:&quot;sd&quot;,&quot;duration&quot;:44,&quot;seconds&quot;:0,&quot;isLive&quot;:0,&quot;playbackRate&quot;:1,&quot;build&quot;:&quot;3.23.2&quot;,&quot;signature&quot;:&quot;e4f4bc1e58d89ee18f72441c2f3d7663&quot;,&quot;session&quot;:&quot;a9e89658d0ace55e182ad93f2254a85faf6ec4c11605726745&quot;,&quot;time&quot;:1605726745,&quot;expires&quot;:3600}" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">{&quot;referrer&quot;:&quot;https://stagingaws7.certain.com/profile/form/index.cfm&quot;,&quot;embed&quot;:true,&quot;context&quot;:&quot;embed.main&quot;,&quot;autoplay&quot;:0,&quot;loop&quot;:0,&quot;id&quot;:467496847,&quot;vodId&quot;:null,&quot;vodSaleId&quot;:null,&quot;sessionTime&quot;:0,&quot;videoShape&quot;:0,&quot;spatialPlayback&quot;:0,&quot;userId&quot;:0,&quot;userAccountType&quot;:&quot;none&quot;,&quot;userIsMod&quot;:0,&quot;teamOriginUserId&quot;:null,&quot;teamId&quot;:null,&quot;ownerId&quot;:15371523,&quot;ownerAccountType&quot;:&quot;pro&quot;,&quot;privacy&quot;:&quot;anybody&quot;,&quot;rating&quot;:null,&quot;type&quot;:&quot;html&quot;,&quot;videoFileId&quot;:0,&quot;delivery&quot;:&quot;dash&quot;,&quot;profileId&quot;:-1,&quot;quality&quot;:&quot;sd&quot;,&quot;duration&quot;:44,&quot;seconds&quot;:0,&quot;isLive&quot;:0,&quot;playbackRate&quot;:1,&quot;build&quot;:&quot;3.23.2&quot;,&quot;signature&quot;:&quot;e4f4bc1e58d89ee18f72441c2f3d7663&quot;,&quot;session&quot;:&quot;a9e89658d0ace55e182ad93f2254a85faf6ec4c11605726745&quot;,&quot;time&quot;:1605726745,&quot;expires&quot;:3600}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">player-telemetry.vimeo.com</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/player-events/log/play</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">Java</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="video click" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="beacon" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">beacon</stringProp>
+              </elementProp>
+              <elementProp name="session-id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">8930b765bc1e4bd3031d36a9bcfd1695e39ba9e01605735121</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">session-id</stringProp>
+              </elementProp>
+              <elementProp name="authority" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">fresnel.vimeocdn.com </stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">authority</stringProp>
+              </elementProp>
+              <elementProp name="accept-encoding" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">gzip, deflate, br</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">accept-encoding</stringProp>
+              </elementProp>
+              <elementProp name="cookie" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">player=&quot;&quot;; vuid=pl925495992.1582282684</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">cookie</stringProp>
+              </elementProp>
+              <elementProp name="origin" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://player.vimeo.com</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">origin</stringProp>
+              </elementProp>
+              <elementProp name="eferer" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">https://player.vimeo.com/</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">eferer</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">fresnel.vimeocdn.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">add/player-stats?beacon=1&amp;session-id=8930b765bc1e4bd3031d36a9bcfd1695e39ba9e01605735121</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">Java</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">https://fresnel.vimeocdn.com/add/player-stats?beacon=1&amp;session-id=8930b765bc1e4bd3031d36a9bcfd1695e39ba9e01605735121</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+          <stringProp name="FileSaver.filename"></stringProp>
+          <boolProp name="FileSaver.errorsonly">false</boolProp>
+          <boolProp name="FileSaver.successonly">false</boolProp>
+          <boolProp name="FileSaver.skipsuffix">false</boolProp>
+          <boolProp name="FileSaver.skipautonumber">false</boolProp>
+        </ResultSaver>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
