@@ -1,1 +1,7 @@
-# Performance_CustomProjects_Jmeter
+# Webapp Custom Projects performance tests and reports
+
+TECHNOLOGY
+- Apache Jmeter 5.0
+- Jmeter reporting engine
+- AWS Win 11 VM
+- Jenkins
